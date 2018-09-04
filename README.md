@@ -20,4 +20,9 @@
 
 ### del_file:删除文件
 
+##使用
+
+###在config/app.php中providers加入以下代码即可使用
+
+    \SheaXiang\LaravelFunctionHelper\HelperServiceProvider::class
 
