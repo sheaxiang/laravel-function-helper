@@ -1,0 +1,27 @@
+{
+    "name": "sheaxiang/laravel-function-helper",
+    "description": "laravel help function",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sheaxiang",
+            "email": "sheaxiang@126.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "SheaXiang\\LaravelFunctionHelper\\": "src/"
+        },
+        "files": [
+          "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SheaXiang\\LaravelFunctionHelper\\Tests\\": "tests/"
+        }
+    }
+}
