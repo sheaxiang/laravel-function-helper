@@ -20,6 +20,8 @@
 
 ### del_file:删除文件
 
+### dda:打印输出数组
+
 ## 使用
 
 ### 在config/app.php中providers加入以下代码即可使用
