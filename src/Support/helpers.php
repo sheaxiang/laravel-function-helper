@@ -205,6 +205,22 @@ if(!function_exists('del_file')) {
 	}
 }
 
+if(!function_exists('dda')){
+
+	/**
+	 * 打印输出数组
+	 * @param $model
+	 */
+	function dda($model)
+	{
+		if (method_exists($model, 'toArray')) {
+			dd($model->toArray());
+		} else {
+			dd($model);
+		}
+	}
+}
+
 
 
 
