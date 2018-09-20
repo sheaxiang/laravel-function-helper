@@ -22,6 +22,14 @@
 
 ### dda:打印输出数组
 
+### succeed:json成功返回
+
+### failed:json失败返回
+
+## 引入
+
+    composer require "sheaxiang/laravel-function-helper"
+
 ## 使用
 
 ### 在config/app.php中providers加入以下代码即可使用
