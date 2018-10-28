@@ -22,6 +22,8 @@
 
 ### dda:打印输出数组
 
+### is_mobile:是否是手机端
+
 ### succeed:json成功返回
 
 ### failed:json失败返回
