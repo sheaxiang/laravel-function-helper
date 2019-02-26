@@ -303,9 +303,15 @@ if (!function_exists('is_mobile')) {
  * @param $respond
  * @return \Illuminate\Http\JsonResponse
  */
-function respond($status, $respond, $code)
+function respond($status, $respond, $code, $http_code)
 {
-	return response()->json(['status' => $status, is_string($respond) ? 'message' : 'data' => $respond], $code);
+	return response()->json(
+	    [
+            'status' => $status,
+            'code' => $code,
+            is_string($respond) ? 'message' : 'data' => $respond
+        ],
+        $http_code);
 }
 
 /**
@@ -314,9 +320,9 @@ function respond($status, $respond, $code)
  * @param $respond
  * @return \Illuminate\Http\JsonResponse
  */
-function succeed($respond = 'Request success!')
+function succeed($respond = 'Request success!', $code = 200)
 {
-	return respond(true, $respond, 200);
+	return respond(true, $respond, $code, 200);
 }
 
 /**
@@ -327,7 +333,7 @@ function succeed($respond = 'Request success!')
  */
 function failed($respond = 'Request failed!', $code = 400)
 {
-	return respond(false, $respond,$code);
+	return respond(false, $respond, $code, 400);
 }
 
 
