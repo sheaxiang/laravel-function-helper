@@ -320,9 +320,9 @@ function respond($status, $respond, $code, $http_code)
  * @param $respond
  * @return \Illuminate\Http\JsonResponse
  */
-function succeed($respond = 'Request success!', $code = 200)
+function succeed($respond = 'Request success!', $code = 200, $http_code = 200)
 {
-	return respond(true, $respond, $code, 200);
+	return respond(true, $respond, $code, $http_code);
 }
 
 /**
@@ -331,9 +331,9 @@ function succeed($respond = 'Request success!', $code = 200)
  * @param $respond
  * @return \Illuminate\Http\JsonResponse
  */
-function failed($respond = 'Request failed!', $code = 400)
+function failed($respond = 'Request failed!', $code = 400, $http_code = 400)
 {
-	return respond(false, $respond, $code, 400);
+	return respond(false, $respond, $code, $http_code);
 }
 
 
